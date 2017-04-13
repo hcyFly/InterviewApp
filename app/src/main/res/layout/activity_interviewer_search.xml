@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_interviewer_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <RelativeLayout
+        android:id="@+id/ll_search_conditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_top_search">
+
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60px"
+            android:drawableBottom="@drawable/search_page_edit_text_line"
+            android:drawableLeft="@drawable/search_page_edit_text_start_date_icon"
+            android:drawableRight="@drawable/search_page_edit_text_add_icon"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="开始日期"
+            android:paddingLeft="20px"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="42px"/>
+
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:layout_below="@id/tv_start_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:drawableBottom="@drawable/search_page_edit_text_line"
+            android:drawableLeft="@drawable/search_page_edit_text_stop_date_icon"
+            android:drawableRight="@drawable/search_page_edit_text_add_icon"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="结束日期"
+            android:paddingLeft="20px"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="42px"/>
+
+
+        <EditText
+            android:id="@+id/et_search_text"
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:layout_below="@+id/tv_end_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:background="@null"
+            android:drawableBottom="@drawable/search_page_edit_text_line"
+            android:drawableLeft="@drawable/search_page_edit_text_keyword_icon"
+            android:drawableRight="@drawable/search_page_edit_text_clear_icon"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="请输入搜索关键字"
+            android:inputType="text"
+            android:paddingLeft="20px"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+
+        <Button
+            android:id="@+id/but_determine"
+            android:layout_width="400px"
+            android:layout_height="118px"
+            android:layout_below="@id/et_search_text"
+            android:layout_marginBottom="20px"
+            android:layout_marginRight="55px"
+            android:layout_marginTop="45px"
+            android:layout_toRightOf="@+id/tv_layout"
+            android:background="@drawable/radius_but"
+            android:text="确 定"
+            android:textColor="#ffffff"
+            android:textSize="48px"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/but_cancel"
+            android:layout_width="400px"
+            android:layout_height="118px"
+            android:layout_below="@id/et_search_text"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="45px"
+            android:layout_toLeftOf="@+id/tv_layout"
+            android:background="@drawable/radius_but"
+            android:text="重 置"
+            android:textColor="#ffffff"
+            android:textSize="48px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_layout"
+            android:layout_width="1px"
+            android:layout_height="118px"
+            android:layout_below="@id/et_search_text"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="45px"/>
+
+    </RelativeLayout>
+
+    <com.accenture.cn.interview.widget.SExpandableListView
+        android:id="@+id/sel_lsit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_search_conditions"
+        android:dividerHeight="3px">
+    </com.accenture.cn.interview.widget.SExpandableListView>
+
+    <RelativeLayout
+        android:id="@+id/ll_top_search"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_backgroup"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title_search"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="搜索"
+            android:textColor="#ffffff"
+            android:textSize="50px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_search_show_text"
+            android:layout_width="78px"
+            android:layout_height="78px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="36px"
+            android:background="@drawable/interview_page_title_search_icon"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40px"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_search_back"
+            android:layout_width="48px"
+            android:layout_height="58px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="38px"
+            android:layout_marginTop="46px"
+            android:background="@drawable/search_page_title_back_button_icon"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40px"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+</RelativeLayout>

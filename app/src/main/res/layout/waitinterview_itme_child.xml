@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="110px"
+                android:background="#ffffff">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="110px"
+        android:layout_marginLeft="120px"
+        android:drawableLeft="@drawable/interview_page_list_interviewer_icon"
+        android:drawablePadding="20px"
+        android:gravity="center_vertical"
+        android:text="邮件标题简要描述，面试者XXX,技术"
+        android:textColor="#7B7B7C"
+        android:textSize="40px"/>
+
+</RelativeLayout>

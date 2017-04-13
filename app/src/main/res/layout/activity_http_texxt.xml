@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_http_texxt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.accenture.cn.interview.activity.HttpTestActivity">
+
+    <Button
+        android:id="@+id/but_but_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http test"/>
+
+    <Button
+        android:id="@+id/but_but_http11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/but_but_http"
+        android:text="dialog test"/>
+
+    <Button
+        android:id="@+id/but_but_docx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/but_but_http11"
+        android:text="test open file docx"/>
+
+    <Button
+        android:id="@+id/but_but_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_docx"
+        android:text="test open file txt"/>
+
+    <Button
+        android:id="@+id/but_but_ppt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_docx"
+        android:layout_toRightOf="@+id/but_but_txt"
+        android:text="test open file ppt"/>
+
+    <Button
+        android:id="@+id/but_but_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_txt"
+        android:text="test open file pdf"/>
+
+    <Button
+        android:id="@+id/but_but_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_txt"
+        android:layout_toRightOf="@+id/but_but_pdf"
+        android:text="test open file img"/>
+
+    <Button
+        android:id="@+id/but_but_hook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_img"
+        android:text="test hook click"/>
+
+    <com.accenture.cn.interview.utils.MarqueeTextView
+        android:id="@+id/mtv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/but_but_hook"/>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mtv_text"
+        android:layout_marginTop="20px">
+
+        <TextView
+            android:id="@+id/tv_tv_http"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello word"/>
+    </ScrollView>
+
+    <com.accenture.cn.interview.utils.DrawableTextView
+        android:id="@+id/drawableTextView"
+        android:layout_width="300px"
+        android:layout_height="100px"
+        android:background="#50FFFF00"
+        android:layout_alignBottom="@+id/but_but_hook"
+        android:layout_toEndOf="@+id/but_but_pdf"
+        android:text="文本信息"
+        android:drawablePadding="10px"
+        android:textColor="#00ff00"
+        app:leftDrawable="@drawable/ic_launcher"
+        app:leftDrawableWidth="56px"
+        app:leftDrawableHeight="56px"
+        android:textSize="36px"/>
+
+</RelativeLayout>

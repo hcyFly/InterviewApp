@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#daf7c2"
+                android:visibility="visible">
+
+   <!-- <LinearLayout
+        android:layout_width="880px"
+        android:layout_height="1000px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130px"
+        android:background="@drawable/radius_linearlayout_bcg"
+        android:orientation="vertical"
+        android:padding="28px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始日期:"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="#70337722"
+            android:gravity="center_vertical"
+            android:hint="2016-12-29"
+            android:paddingLeft="40px"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="42px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45px"
+            android:text="结束日期:"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:background="#70337722"
+            android:gravity="center_vertical"
+            android:hint="2016-12-29"
+            android:paddingLeft="40px"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="42px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45px"
+            android:text="关键字搜索:"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+        <EditText
+            android:id="@+id/et_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:background="#40112211"
+            android:hint="请输入搜索关键字"
+            android:inputType="text"
+            android:paddingLeft="40px"
+            android:textColor="#000000"
+            android:textSize="40px"/>
+
+        <CheckBox
+            android:id="@+id/cb_search_time"
+            android:layout_width="wrap_content"
+            android:layout_height="52px"
+            android:layout_marginTop="15px"
+            android:checked="true"
+            android:text="日期搜索"
+            android:textSize="36px"/>
+
+        <CheckBox
+            android:id="@+id/cb_search_key"
+            android:layout_width="wrap_content"
+            android:layout_height="52px"
+            android:layout_gravity="right"
+            android:layout_marginRight="90px"
+            android:layout_marginTop="-52px"
+            android:text="关键字搜索"
+            android:textSize="36px"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48px"
+            android:layout_marginTop="15px"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="注：日期和关键字可以单独或结合一起进行搜索"
+            android:textSize="36px"/>
+
+        <Button
+            android:id="@+id/but_determine"
+            android:layout_width="300px"
+            android:layout_height="118px"
+            android:layout_gravity="right"
+            android:layout_marginRight="15px"
+            android:layout_marginTop="45px"
+            android:background="@drawable/radius_but"
+            android:text="确 定"
+            android:textSize="48px"
+            />
+
+        <Button
+            android:id="@+id/but_cancel"
+            android:layout_width="300px"
+            android:layout_height="118px"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="-118px"
+            android:background="@drawable/radius_but"
+            android:text="取 消"
+            android:textSize="48px"
+            />
+    </LinearLayout>-->
+
+</RelativeLayout>

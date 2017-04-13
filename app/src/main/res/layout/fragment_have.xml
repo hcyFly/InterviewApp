@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.accenture.cn.interview.widget.SExpandableListView
+        android:id="@+id/elsitview_have"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150px"
+        android:background="#ffffff"
+        android:dividerHeight="3px">
+    </com.accenture.cn.interview.widget.SExpandableListView>
+
+    <RelativeLayout
+        android:id="@+id/ll_top_have"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/title_backgroup"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_title_have"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="已面试者"
+            android:textColor="#ffffff"
+            android:textSize="50px"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_search_have"
+            android:layout_width="78px"
+            android:layout_height="78px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="26px"
+            android:layout_marginTop="36px"
+            android:background="@drawable/interview_page_title_search_icon"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40px"/>
+
+        <TextView
+            android:id="@+id/tv_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="150px"
+            android:layout_marginLeft="30px"
+            android:gravity="center"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:text="登 出"
+            android:textColor="#ffffff"
+            android:textSize="40px"/>
+    </RelativeLayout>
+
+</FrameLayout>

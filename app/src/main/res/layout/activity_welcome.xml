@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_in_page_backgroup">
+
+    <Button
+        android:id="@+id/but_time_count"
+        android:layout_width="260px"
+        android:layout_height="260px"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="120px"
+        android:layout_marginTop="160px"
+        android:background="@null"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/colorPrimary"
+        android:textSize="56px"/>
+
+</RelativeLayout>

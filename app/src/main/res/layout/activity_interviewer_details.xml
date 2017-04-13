@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_interviewer_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_top_details"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:background="@drawable/title_backgroup"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_search_back"
+            android:layout_width="48px"
+            android:layout_height="58px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="38px"
+            android:layout_marginTop="46px"
+            android:background="@drawable/search_page_title_back_button_icon"
+            android:gravity="center"
+            android:text=""
+            android:textSize="40px"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_title_search"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="面试者详情页面"
+            android:textColor="#ffffff"
+            android:textSize="50px"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+    <!--内容-->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="78px"
+                    android:background="#20000000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:text="面试者姓名："
+                    android:textColor="#000000"
+                    android:textSize="48px"/>
+
+                <TextView
+                    android:id="@+id/tv_title_interviewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="中(英)名"
+                    android:padding="15px"
+                    android:text=""
+                    android:textColor="#80000000"
+                    android:textSize="42px"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="78px"
+                    android:background="#20000000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:text="技能："
+                    android:textColor="#000000"
+                    android:textSize="48px"/>
+
+                <com.ms.square.android.expandabletextview.ExpandableTextView
+                    android:id="@+id/expand_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    expandableTextView:animDuration="200"
+                    expandableTextView:maxCollapsedLines="2">
+
+                    <TextView
+                        android:id="@+id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15px"
+                        android:textColor="#80000000"
+                        android:textSize="42px"/>
+
+                    <ImageButton
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:background="@android:color/transparent"
+                        android:padding="16dp"/>
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/tv_attachment"
+                    android:layout_width="match_parent"
+                    android:layout_height="78px"
+                    android:background="#20000000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:text="附件："
+                    android:textColor="#000000"
+                    android:textSize="48px"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="168px"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/but_attachment_interviewer_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="168px"
+                        android:layout_below="@+id/tv_attachment"
+                        android:drawableLeft="@drawable/interviewer_details_page_edit_text_attachments_icon"
+                        android:drawablePadding="20px"
+                        android:paddingRight="40px"
+                        android:text="附件(简历)"
+                        android:textColor="#80000000"
+                        android:textSize="42px"/>
+
+                    <Button
+                        android:id="@+id/but_attachment_interviewer_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="168px"
+                        android:layout_below="@+id/tv_attachment"
+                        android:layout_marginLeft="36px"
+                        android:padding="15px"
+                        android:text="+附件2"
+                        android:textColor="#80000000"
+                        android:textSize="42px"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_call_tel"
+                android:layout_width="match_parent"
+                android:layout_height="120px"
+                android:layout_marginTop="15px"
+                android:background="#20000000"
+                android:paddingLeft="20px">
+
+                <TextView
+                    android:id="@+id/tv_hr_tel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120px"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:text="HR电话：400-334242535"
+                    android:textColor="#000000"
+                    android:textSize="48px"/>
+
+                <ImageView
+                    android:id="@+id/but_call_tel"
+                    android:layout_width="260px"
+                    android:layout_height="108px"
+                    android:layout_alignParentRight="true"
+                    android:padding="20px"
+                    android:src="@drawable/interviewer_details_page_edit_text_phone_icon"
+
+                    />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/ll_first_interviewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="78px"
+                        android:layout_marginTop="15px"
+                        android:background="#20000000"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20px"
+                        android:text="面试反馈结果："
+                        android:textColor="#000000"
+                        android:textSize="48px"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3px"
+                        android:background="#20000000"
+                        android:orientation="vertical"
+                        android:paddingLeft="20px">
+
+                        <CheckBox
+                            android:id="@+id/cb_isFirst_interviewer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="90px"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3px"
+                            android:checked="false"
+                            android:text="初面"
+                            android:textSize="56px"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="是否通过："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_isFirst_through_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="是"
+                            android:textSize="48px"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_isFirst_through_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:layout_marginLeft="90px"
+                            android:gravity="center_vertical"
+                            android:text="否"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="面试官EID："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_first_eid"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="您的EID"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="面试官手机号："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_first_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="108px"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:gravity="center_vertical"
+                                android:hint="您的手机号"
+                                android:inputType="phone"
+                                android:paddingBottom="0px"
+                                android:text=""
+                                android:textColor="@color/color_update_interviewinfo"
+                                android:textSize="48px"/>
+
+                            <TextView
+                                android:id="@+id/tv_et_first_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="108px"
+                                android:drawablePadding="20px"
+                                android:drawableRight="@drawable/interviewer_details_page_edit_text_phone_icon"
+                                android:gravity="center_vertical"
+                                android:paddingRight="20px"
+                                android:text=""
+                                android:textColor="@color/color_update_interviewinfo"
+                                android:textSize="48px"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="面试者技能："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_inerviewer_skills"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="面试者技能，如：java / c++"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="技术熟练程度："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <TextView
+                            android:id="@+id/et_inerviewer_skilled"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="P0 - P4"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="具体描述："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_inerviewer_first_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="60px"
+                            android:layout_marginTop="-15dp"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="您对面试者的面试情况描述..."
+                            android:inputType="textMultiLine"
+                            android:padding="15px"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="42px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_is_pass_first"
+                    android:layout_width="460px"
+                    android:layout_height="460px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/interviewer_details_page_pass_seal_icon"
+                    android:visibility="gone"/>
+            </FrameLayout>
+            <!--终面-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/ll_feventually_interviewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3px"
+                        android:background="#20000000"
+                        android:orientation="vertical"
+                        android:paddingLeft="20px">
+
+                        <CheckBox
+                            android:id="@+id/cb_eventually_interviewer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="90px"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="3px"
+                            android:checked="false"
+                            android:text="终面"
+                            android:textSize="56px"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="是否通过："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_isEventually_through_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="是"
+                            android:textSize="48px"/>
+
+                        <CheckBox
+                            android:id="@+id/cb_isEventually_through_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:layout_marginLeft="90px"
+                            android:gravity="center_vertical"
+                            android:text="否"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="面试官EID："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_Eventually_eid"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="您的EID"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="面试官手机号："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            >
+
+                            <EditText
+                                android:id="@+id/et_Eventually_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="108px"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:gravity="center_vertical"
+                                android:hint="您的手机号"
+                                android:inputType="phone"
+                                android:paddingBottom="0px"
+                                android:text=""
+                                android:textColor="@color/color_update_interviewinfo"
+                                android:textSize="48px"/>
+
+                            <TextView
+                                android:id="@+id/tv_et_Eventually_tel"
+                                android:layout_width="match_parent"
+                                android:layout_height="108px"
+                                android:drawablePadding="20px"
+                                android:drawableRight="@drawable/interviewer_details_page_edit_text_phone_icon"
+                                android:gravity="center_vertical"
+                                android:paddingRight="20px"
+                                android:text=""
+                                android:textColor="@color/color_update_interviewinfo"
+                                android:textSize="48px"
+                                android:visibility="gone"/>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="技能经验年限："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_inerviewer_skills_ysears_eventually"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="技能年限"
+                            android:inputType="number"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="技术级别："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <TextView
+                            android:id="@+id/et_inerviewer_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="(0-12初级,13-24中级,25-36资深)"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="岗位角色："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <TextView
+                            android:id="@+id/et_inerviewer_job_role"
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:gravity="center_vertical"
+                            android:hint="岗位角色水平"
+                            android:inputType="text"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="48px"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="20px">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="108px"
+                            android:gravity="center_vertical"
+                            android:text="最终面试反馈具体描述："
+                            android:textColor="#000000"
+                            android:textSize="48px"/>
+
+                        <EditText
+                            android:id="@+id/et_inerviewer_eventually_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="60px"
+                            android:layout_marginTop="-45px"
+                            android:background="@null"
+                            android:enabled="false"
+                            android:gravity="center_vertical"
+                            android:hint="您对面试者的面试情况描述..."
+                            android:inputType="textMultiLine"
+                            android:padding="15px"
+                            android:paddingBottom="0px"
+                            android:text=""
+                            android:textColor="@color/color_update_interviewinfo"
+                            android:textSize="42px"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_is_pass_eventually"
+                    android:layout_width="460px"
+                    android:layout_height="460px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/interviewer_details_page_pass_seal_icon"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/but_commit_back"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginBottom="60px"
+                android:layout_marginLeft="36px"
+                android:layout_marginRight="36px"
+                android:layout_marginTop="60px"
+                android:background="@drawable/radius_but"
+                android:text="提 交"
+                android:textColor="#ffffff"
+                android:textSize="60px"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

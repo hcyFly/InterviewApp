@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sign_in_page_backgroup">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/ll_top_search"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/title_backgroup"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title_search"
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="注 册"
+                android:textColor="#ffffff"
+                android:textSize="50px"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_search_back"
+                android:layout_width="48px"
+                android:layout_height="58px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="38px"
+                android:layout_marginTop="46px"
+                android:background="@drawable/search_page_title_back_button_icon"
+                android:gravity="center"
+                android:scaleX="1.0"
+                android:scaleY="1.0"
+                android:text=""
+                android:textSize="40px"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_rgs_account"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_below="@+id/ll_top_search"
+            android:layout_margin="50px"
+            android:background="@drawable/sign_in_page_edit_text_backgroup"
+            android:hint="请填写你的EID账号"
+            android:inputType="textPhonetic"
+            android:padding="20px"
+            android:textSize="36px"/>
+
+        <EditText
+            android:id="@+id/et_auth_code"
+            android:layout_width="500px"
+            android:layout_height="150px"
+            android:layout_below="@+id/et_rgs_account"
+            android:layout_margin="50px"
+            android:background="@drawable/sign_in_page_edit_text_backgroup"
+            android:hint="你埃森哲邮箱收到的验证码"
+            android:padding="20px"
+            android:textSize="36px"/>
+
+        <Button
+            android:id="@+id/but_get_auth_code"
+            android:layout_width="300px"
+            android:layout_height="150px"
+            android:layout_below="@+id/et_rgs_account"
+            android:layout_marginTop="50px"
+            android:layout_toRightOf="@+id/et_auth_code"
+            android:background="@drawable/radius_but"
+            android:text="获取验证码"
+            android:textColor="#ffffff"/>
+
+
+        <EditText
+            android:id="@+id/et_first_pw"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_below="@+id/but_get_auth_code"
+            android:layout_margin="50px"
+            android:background="@drawable/sign_in_page_edit_text_backgroup"
+            android:hint="设置密码"
+            android:inputType="textPassword"
+            android:padding="20px"
+            android:textSize="36px"/>
+
+        <EditText
+            android:id="@+id/et_confirm_pw"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_below="@+id/et_first_pw"
+            android:layout_margin="50px"
+            android:background="@drawable/sign_in_page_edit_text_backgroup"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:padding="20px"
+            android:textSize="36px"/>
+
+        <Button
+            android:id="@+id/but_register_or_update_pw"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_below="@+id/et_confirm_pw"
+            android:layout_margin="50px"
+            android:background="@drawable/radius_but"
+            android:text="注 册 / 提交新密码"
+            android:textColor="#ffffff"
+            android:textSize="60px"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+</ScrollView>

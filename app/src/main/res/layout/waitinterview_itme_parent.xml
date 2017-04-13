@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:layout_gravity="center_vertical"
+                android:background="#EEF2F4">
+
+    <TextView
+        android:id="@+id/tv_parent_time"
+        android:layout_width="wrap_content"
+        android:layout_height="130px"
+        android:layout_marginLeft="50px"
+        android:drawableLeft="@drawable/interview_page_list_date_icon"
+        android:drawablePadding="20px"
+        android:gravity="center_vertical"
+        android:text="2016-12-26"
+        android:textColor="#7B7B7C"
+        android:textSize="56px"/>
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/interview_page_bottom_tab_over_interview_select_icon" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/interview_page_bottom_tab_over_interview_select_icon" android:state_checked="true"></item>
+    <item android:drawable="@drawable/interview_page_bottom_tab_over_interview_icon"></item>
+
+
+    <!--<item android:state_pressed="true" android:drawable="@drawable/map_focus"></item>-->
+    <!--<item android:state_checked="true" android:drawable="@drawable/map_focus"></item>-->
+    <!--<item android:drawable="@drawable/map_normal"></item>-->
+</selector>

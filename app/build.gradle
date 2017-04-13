@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "com.accenture.cn.interview"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/color'] } }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //日期选择
+    //弹框
+    //动态权限管理
+    //http
+    /*  //    compile 'com.huangdali:myhttputils:2.1.6'*/
+    
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile'com.github.jdsjlzx:LRecyclerView:1.3.0'
+    compile 'com.bigkoo:pickerview:2.1.1'
+    compile 'com.lai.weavey:dialog:2.0.1'
+    compile 'com.mylhyl:acp:1.1.7'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.ms-square:expandableTextView:0.1.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta2'
+    compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+    testCompile 'junit:junit:4.12'
+}
