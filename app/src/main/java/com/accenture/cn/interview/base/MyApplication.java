@@ -17,10 +17,10 @@ public class MyApplication extends Application {
 
     private static String TAG = "com.accenture.cn.interview";
     public static int APP_STATE_ATY = -1;
+    public static int countAty = 0;
     public static String saveDriPath = null;
     public static Context CONTEXT = null;
     private volatile static MyApplication mInstance = null;
-    public static int countAty = 0;
 
 
     public static MyApplication instance() {
