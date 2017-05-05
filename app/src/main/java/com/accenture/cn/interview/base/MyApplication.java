@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.accenture.cn.interview.BuildConfig;
 import com.accenture.cn.interview.utils.FileUtil;
+import com.accenture.cn.interview.widget.SupportMultipleScreensUtil;
 import com.socks.library.KLog;
 
 /**
@@ -48,6 +49,7 @@ public class MyApplication extends Application {
         super.onCreate();
         CONTEXT = getApplicationContext();
         saveDriPath = FileUtil.getDiskCacheDir(CONTEXT);
+        SupportMultipleScreensUtil.init(CONTEXT);
         KLog.init(BuildConfig.LOG_DEBUG);
         KLog.i(MyApplication.TAG, "saveDriPath----" + saveDriPath);
         registerActivityLifecycleCallbacks(new AppStatusTracker());

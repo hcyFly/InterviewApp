@@ -107,6 +107,10 @@ public class WaitInterviewFragment extends Fragment implements View.OnClickListe
             KLog.i(TAG, "setUserVisibleHint-->相当于Fragment的onResume");
         } else {
             KLog.i(TAG, "setUserVisibleHint-->相当于Fragment的onPause");
+            if (mHandlerWait != null) {
+                mHandlerWait.removeCallbacksAndMessages(null);
+                KLog.i(TAG, "removeCallbacksAndMessages");
+            }
         }
     }
 
@@ -406,6 +410,5 @@ public class WaitInterviewFragment extends Fragment implements View.OnClickListe
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mHandlerWait.removeCallbacksAndMessages(null);
     }
 }

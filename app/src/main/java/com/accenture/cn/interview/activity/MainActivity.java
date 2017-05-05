@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         View rootView = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(MainActivity.this);
         SupportMultipleScreensUtil.scale(rootView);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();

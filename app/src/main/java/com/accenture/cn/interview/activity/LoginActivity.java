@@ -91,7 +91,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             getSupportActionBar().hide();
         }
         View rootView = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(LoginActivity.this);
         SupportMultipleScreensUtil.scale(rootView);
         MyApplication.APP_STATE_ATY = 1;
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
@@ -162,7 +161,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                                                      @Override
                                                      public void onSucceed(User user) {
                                                          dismissLoadingDialog();
-                                                         if (user.getCode() == 0) {
+                                                         if (user.getCode() == 0 && user.getResult() != null) {
                                                              //登录成功
                                                              if (!StringUtils.isEmpty(user.getResult().getAuz())) {
                                                                  SPSecurity.getInstance().mSecurityEditor.putString("auz", user.getResult().getAuz());

@@ -117,6 +117,10 @@ public class HaveInterviewFragment extends Fragment implements View.OnClickListe
             }
         } else {
             KLog.i(TAG, "--setUserVisibleHint-->相当于Fragment的onPause");
+            if (mHandlerHave != null) {
+                mHandlerHave.removeCallbacksAndMessages(null);
+                KLog.i(TAG, "removeCallbacksAndMessages");
+            }
         }
     }
 

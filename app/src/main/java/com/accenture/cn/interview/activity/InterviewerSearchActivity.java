@@ -115,7 +115,6 @@ public class InterviewerSearchActivity extends AppCompatActivity implements View
             getSupportActionBar().hide();
         }
         View rootview = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(InterviewerSearchActivity.this);
         SupportMultipleScreensUtil.scale(rootview);
         mContext = this;
         mStatus = getIntent().getIntExtra(Constant.INTERVIEWER_WAIT_OR_ALREADY, 0);

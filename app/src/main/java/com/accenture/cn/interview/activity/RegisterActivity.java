@@ -45,13 +45,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        View rootview = findViewById(android.R.id.content);
+        SupportMultipleScreensUtil.scale(rootview);
         setContentView(R.layout.activity_register);
         if (getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
-        View rootview = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(RegisterActivity.this);
-        SupportMultipleScreensUtil.scale(rootview);
         mContext = this;
         isRegister = getIntent().getBooleanExtra(Constant.IS_REGISTER_TRUE, false);
         initView();

@@ -2,6 +2,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:background="@drawable/sign_in_page_backgroup"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
@@ -80,7 +81,7 @@
                     android:layout_width="60px"
                     android:layout_height="60px"
                     android:layout_marginLeft="18px"
-                    android:layout_marginTop="62px"
+                    android:layout_marginTop="102px"
                     android:background="@drawable/sign_in_page_password_edit_text_backgroup_logo"/>
 
                 <android.support.design.widget.TextInputLayout
@@ -90,12 +91,15 @@
                     android:focusable="true"
                     android:focusableInTouchMode="true"
                     android:paddingLeft="88px"
-                    android:paddingTop="12px">
+                    android:paddingTop="12px"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/selector_shwo_pwd"
+                    app:passwordToggleTintMode="src_atop">
 
                     <EditText
                         android:id="@+id/password"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="150px"
                         android:hint="@string/prompt_password"
                         android:imeActionId="@+id/login"
                         android:imeActionLabel="@string/action_sign_in_short"

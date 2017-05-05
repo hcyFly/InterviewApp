@@ -58,7 +58,6 @@ public class HttpTestActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_http_texxt);
         View rootview = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(HttpTestActivity.this);
         SupportMultipleScreensUtil.scale(rootview);
 
         mContext = this;

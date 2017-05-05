@@ -88,7 +88,6 @@ public class InterviewerDetailsActivity extends AppCompatActivity implements Vie
             getSupportActionBar().hide();
         }
         View rootview = findViewById(android.R.id.content);
-        SupportMultipleScreensUtil.init(InterviewerDetailsActivity.this);
         SupportMultipleScreensUtil.scale(rootview);
         mContext = this;
 
